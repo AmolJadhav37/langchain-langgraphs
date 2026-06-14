@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 model = ChatGroq(
-    model="llama-3.1-8b-instant"
+    model="llama-3.1-8b-instant",temperature=1.5
 )
 
-reslt = model.invoke("Write a 5 line poem about computers")
-print(reslt)
+reslt = model.invoke("suggest me five indian names for a boy considering new generation don't write any description of the names just write the names")
+print(reslt.content)
