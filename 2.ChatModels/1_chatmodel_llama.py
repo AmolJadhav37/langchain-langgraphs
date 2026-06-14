@@ -3,10 +3,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatGroq(
+model = ChatGroq(
     model="llama-3.1-8b-instant"
 )
 
-result = llm.invoke("Write a 5 line poem about cricket")
-
-print(result.content)
+reslt = model.invoke("Write a 5 line poem about computers")
+print(reslt)
